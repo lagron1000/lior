@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { move } from '../animations';
+import {  } from '../animations';
 import { StatesService } from '../states.service';
 
 @Component({
@@ -7,7 +7,7 @@ import { StatesService } from '../states.service';
   templateUrl: './sites.component.html',
   styleUrls: ['./sites.component.scss'],
   animations: [
-    move,
+    
     
   ]
 })

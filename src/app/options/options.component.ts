@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { move, btnColor, slideInAnimation } from '../animations';
+import { btnColor, slideInAnimation } from '../animations';
 import { StatesService } from '../states.service';
 import { RouterOutlet } from '@angular/router';
 
@@ -8,7 +8,7 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './options.component.html',
   styleUrls: ['./options.component.scss'],
   animations: [
-    move, 
+    
     btnColor,
     slideInAnimation
   ]
