@@ -1,0 +1,29 @@
+.grid-container2{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    // padding: 10px;
+    margin: auto;
+    width: 15%;
+    padding-top: 15px;
+}
+
+@media only screen and (max-width: 880px) {
+    .grid-container2{
+        width: 40%;
+    }
+}
+
+.btn2{
+    background-color: #0069D9;
+    color: white;
+    // margin-left: 80px;
+    width: 43px;
+    min-width: 43px;
+}
+
+
+.grid-item2{
+    // padding: 20px;
+    // font-size: 30px;
+    text-align: center;
+}

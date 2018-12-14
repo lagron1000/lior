@@ -1,0 +1,11 @@
+#liorPic{
+    width: 20%;
+    border-radius: 30%;
+    box-shadow: 0 6px 12px 0 black;
+}
+
+@media only screen and (max-width: 600px) {
+    #liorPic{
+        width: 50%;
+    }
+}

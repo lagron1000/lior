@@ -1,11 +1,5 @@
-<div class="options">
-  <div class="about">
-      <h1>Lior Agron</h1>
-      <img id="liorPic" src="../../assets/lior.jpeg" />
-  </div>
-  <div class="example-button-row">
-      <button mat-raised-button class="btn">Primary</button>
-      <button mat-raised-button class="btn">Primary</button>
-      <button mat-raised-button class="btn">Primary</button>
+<div [@move]='currState' class="options">
+    <div >
+        <router-outlet #outlet="outlet"></router-outlet>
     </div>
 </div>
