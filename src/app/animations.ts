@@ -11,18 +11,8 @@ export const move = trigger('move', [
         backgroundColor: '#490009', color: '#e0e0e0'
     })),
     transition('* <=> *', [
-        style({ opacity : 1}),
-        group([
-            animate('500ms ease-in-out', style({
-                left : '-100%'
-            })),
-            animate('500ms ease-in-out', style({
-                opacity : '0',
-            })),
-        ]),
         animate('500ms ease-in-out'), animateChild()
     ]),
-
 ])
 
 export const btnColor = trigger('btnColor', [
@@ -42,40 +32,34 @@ export const btnColor = trigger('btnColor', [
 
 export const slideInAnimation =
     trigger('routeAnimations', [
-        state('options', style({
-             left: '-100%',
-        })),
-        state('sites', style({
-            left: '100%'
-       })),
+        transition('HomePage <=> SitesPage', [
+            style({ position: 'relative' }),
+            query(':enter, :leave', [
+                style({
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%'
+                })
+            ]),
+            query(':enter', [
+                style({ left: '-100%' }), animateChild()
+            ]),
+            query(':leave', animateChild()),
+            group([
+                query(':leave', [
+                    animate('500ms ease-out', style({ left: '100%' })), animateChild()
+                ]),
+                query(':enter', [
+                    animate('500ms ease-out', style({ left: '0%' })), animateChild()
+                ]),
+                query('@move', [
+                    animate('500ms ease-out'), animateChild()
+                ])
+            ]),
+            query(':enter', animateChild()),
+        ]),
+
     ]);
-
-// export const slideInAnimation =
-//     trigger('routeAnimations', [
-//         transition('HomePage <=> SitesPage', [
-//             style({ position: 'relative' }),
-//             query(':enter, :leave', [
-//                 style({
-//                     position: 'absolute',
-//                     top: 0,
-//                     left: 0,
-//                     width: '100%'
-//                 })
-//             ]),
-//             query(':enter', [
-//                 style({ left: '-100%' })
-//             ]),
-            
-//             group([
-//                 query(':leave', [
-//                     style({ left: '100%' })
-//                 ]),
-//                 query(':enter', [
-//                     style({ left: '0%' })
-//                 ]),
-//             ]),
-//         ]),
-
-//     ]);
 
     //the move animation is the parent so the slide animation should not animate.
