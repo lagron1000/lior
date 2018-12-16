@@ -1,11 +1,11 @@
 <div class="grid-container">
   <div class="grid-item">
-      <button routerLink="/sites" routerLinkActive="active" [@btnColor]='currState' (click)='change("sites")' mat-raised-button class="btn">Sites I've Made</button>
+      <button (click)='change("sites")' routerLinkActive="active" [@btnColor]='currState' mat-raised-button class="btn">Sites I've Made</button>
   </div>
   <div class="grid-item">
-      <button [@btnColor]='currState' (click)='change("art")' mat-raised-button class="btn">Visual Art I've Designed</button>
+      <button (click)='change("art")' [@btnColor]='currState'  mat-raised-button class="btn">Visual Art I've Designed</button>
   </div>
   <div class="grid-item">
-      <button [@btnColor]='currState' (click)='change("cv")' mat-raised-button class="btn">My CV</button>    
+      <button (click)='change("cv")' [@btnColor]='currState' mat-raised-button class="btn">My CV</button>    
   </div>
 </div>

@@ -11,16 +11,15 @@ export const move = trigger('move', [
         backgroundColor: '#490009', color: '#e0e0e0'
     })),
     transition('* <=> *', [
-        style({ opacity : 1}),
         group([
             animate('500ms ease-in-out', style({
-                left : '-100%'
-            })),
-            animate('500ms ease-in-out', style({
-                opacity : '0',
+                left : '-100%',
             })),
         ]),
         animate('500ms ease-in-out'), animateChild()
+    ]),
+    transition('void <=> *', [
+        animate('500ms ease-in-out', style({width : '100%'})), animateChild()
     ]),
 
 ])
@@ -35,20 +34,28 @@ export const btnColor = trigger('btnColor', [
     state('cv', style({
         backgroundColor: '#4F301D', color: '#e0e0e0'
     })),
-    state('options', style({
+    state('', style({
         backgroundColor: '#0069D9', color: 'white'
     })),
 ])
 
 export const slideInAnimation =
     trigger('routeAnimations', [
-        state('options', style({
+        state('', style({
              left: '-100%',
         })),
         state('sites', style({
             left: '100%'
        })),
     ]);
+
+    
+export const loaded =
+trigger('loaded', [
+    state('loaded', style({
+         width: '100%',
+    })),
+]);
 
 // export const slideInAnimation =
 //     trigger('routeAnimations', [

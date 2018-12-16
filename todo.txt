@@ -6,3 +6,7 @@
  ייתכן שכל הצרות על אנימציית הכפתורים הייתה לחינם. כעת אעבוד על העמוד של האתרים. בעת מעבר ראוטינג בין האופשנס לאתרים, תתחיל אנימציית צבע הרקע
  תהיה אנימציית מעבר. לא צריך אנימציה לשינוי הכפתורים לא בצבע ולא בגודל מכוון שיוכנסו כפותרים חדשים עם העמוד החדש כל פעם.
  להעביר את התוכן מאופשנס קומפונט לקומפוננט חדש כי מעבר צבע הרקע יהיה בקומפונט הבסיס
+
+
+ i left some changes in the sites ts and html component. trying to work on a image loading animation so that images would
+go from 0 width to 100% width when loaded instead of just popping out of nowhere

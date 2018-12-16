@@ -33,8 +33,10 @@ export class OptionsComponent implements OnInit {
   };
   prepareRoute(outlet: RouterOutlet) {
     this.currRoute = outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
-    console.log(this.currRoute)
     return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
+  }
+  changeOfRoutes(outlet){
+    return this.change(outlet.activatedRouteData.animation)
   }
 
 };
