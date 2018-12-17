@@ -1,0 +1,10 @@
+<div class="grid-item">
+  <div class="card">
+    <div *ngIf="site.myName" class="card-header">
+      <p>{{site.myName}}</p>
+    </div>
+    <div class="card-body">
+      <img (load)='iLoaded()' [@loaded]='loaded' src={{site.myPic}}>
+    </div>
+  </div>
+</div>

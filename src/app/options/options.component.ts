@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { move, btnColor, slideInAnimation } from '../animations';
+import { move, btnColor, slideInAnimation, loaded } from '../animations';
 import { StatesService } from '../states.service';
 import { RouterOutlet } from '@angular/router';
 
@@ -10,7 +10,8 @@ import { RouterOutlet } from '@angular/router';
   animations: [
     move, 
     btnColor,
-    slideInAnimation
+    slideInAnimation,
+    loaded
   ]
 })
 export class OptionsComponent implements OnInit {

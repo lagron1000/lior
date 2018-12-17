@@ -11,6 +11,7 @@ import { SitesComponent } from './sites/sites.component';
 import { AboutComponent } from './about/about.component';
 import {MatCardModule} from '@angular/material/card';
 import { MiniBtnsComponent } from './mini-btns/mini-btns.component';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MiniBtnsComponent } from './mini-btns/mini-btns.component';
     ButtonsComponent,
     SitesComponent,
     AboutComponent,
-    MiniBtnsComponent
+    MiniBtnsComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

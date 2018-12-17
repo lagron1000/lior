@@ -13,6 +13,7 @@ export const move = trigger('move', [
     transition('* <=> *', [
         group([
             animate('500ms ease-in-out', style({
+                position : 'absolute',
                 left : '-100%',
             })),
         ]),
@@ -53,7 +54,7 @@ export const slideInAnimation =
 export const loaded =
 trigger('loaded', [
     state('loaded', style({
-         width: '100%',
+         opacity: 1,
     })),
 ]);
 
